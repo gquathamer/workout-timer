@@ -1,26 +1,25 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react'
 
-export default function App() {
-  const [seconds, updateSeconds] = useState(0);
-  const [timerRunning, setTimerRunning] = useState(false);
+export default function App () {
+  const [seconds, updateSeconds] = useState(0)
+  const [timerRunning, setTimerRunning] = useState(false)
 
   useEffect(() => {
-    let interval = null;
+    let interval = null
 
     if (timerRunning) {
       interval = setInterval(() => {
-        updateSeconds(s => s + 1);
-      }, 1000);
+        updateSeconds(s => s + 1)
+      }, 1000)
     } else {
-      clearInterval(interval);
+      clearInterval(interval)
     }
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
+  }, [timerRunning])
 
-  }, [timerRunning]);
-
-  function clickMe() {
-    setTimerRunning(!timerRunning);
+  function clickMe () {
+    setTimerRunning(!timerRunning)
   }
 
   return (
@@ -34,5 +33,5 @@ export default function App() {
         <button onClick={clickMe}>Click</button>
       </div>
     </>
-  );
+  )
 }
