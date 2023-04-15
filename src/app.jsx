@@ -9,7 +9,7 @@ export default function App() {
 
     if (timerRunning) {
       interval = setInterval(() => {
-        updateSeconds(s => s + 2);
+        updateSeconds(s => s + 1);
       }, 1000);
     } else {
       clearInterval(interval);
