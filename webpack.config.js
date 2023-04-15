@@ -13,20 +13,20 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'dist')
     },
     client: {
       logging: 'error'
     },
     compress: true,
-    port: 9000,
+    port: 9000
   },
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src/index.html')
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [
@@ -36,10 +36,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
             plugins: [
-              ["@babel/plugin-transform-react-jsx" , {
-                "runtime": "automatic"
+              ['@babel/plugin-transform-react-jsx', {
+                runtime: 'automatic'
               }]
             ]
           }
@@ -47,8 +47,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      }
     ]
   }
 };

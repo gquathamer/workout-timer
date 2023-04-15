@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-
+import { React, useState, useEffect } from 'react';
 
 export default function App() {
   const [seconds, updateSeconds] = useState(0);
@@ -27,13 +26,13 @@ export default function App() {
   return (
     <>
       <div className="row">
-      <div className="clock-container">
-        {seconds}
-      </div>
+        <div className="clock-container">
+          {seconds}
+        </div>
       </div>
       <div className="row">
         <button onClick={clickMe}>Click</button>
       </div>
     </>
-  )
+  );
 }
