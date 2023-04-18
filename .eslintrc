@@ -14,12 +14,5 @@
         "react": {
             "version": "detect"
         }
-    },
-    "overrides": [
-        {
-            "files": [
-                "src/**/*.jsx"
-            ]
-        }
-    ]
+    }
 }
