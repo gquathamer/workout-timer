@@ -1,9 +1,9 @@
 import { React } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Input({ updateSeconds }) {
+export default function Input({ updateSecondsFunc }) {
   return (
-    <select onChange={e => updateSeconds(e.target.value)}>
+    <select onChange={e => updateSecondsFunc(Number(e.target.value))}>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -19,5 +19,5 @@ export default function Input({ updateSeconds }) {
 }
 
 Input.propTypes = {
-  updateSeconds: PropTypes.function,
+  updateSecondsFunc: PropTypes.func,
 };
