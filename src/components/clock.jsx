@@ -32,7 +32,14 @@ export default function Clock({
         setTimerRunning(false);
       }
     };
-  }, [timerRunning, activeSeconds, restSeconds]);
+  }, [
+    timerRunning,
+    activeSeconds,
+    restSeconds,
+    updateActiveSeconds,
+    updateRestSeconds,
+    setTimerRunning,
+  ]);
 
   function clickMe() {
     setTimerRunning(!timerRunning);
