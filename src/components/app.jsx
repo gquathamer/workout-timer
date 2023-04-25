@@ -20,7 +20,7 @@ export default function App() {
           setTimerRunning={setTimerRunning}
         />
       </div>
-      <div className="row flex-column col-6">
+      <div className="row flex-column justify-evenly col-6">
         <Input updateSecondsFunc={updateActiveSeconds}></Input>
         <Input updateSecondsFunc={updateRestSeconds}></Input>
       </div>
