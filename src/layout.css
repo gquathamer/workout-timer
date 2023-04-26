@@ -1,0 +1,19 @@
+@media only screen and (min-width: 568px) {
+  select {
+      width: 50%;
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+
+  .col-6 {
+      width: 50%;
+    }
+
+  .col-7 {
+    width: calc(100% / 7);
+  }
+
+  .clock-container {
+    width: 100%;
+  }
+}
